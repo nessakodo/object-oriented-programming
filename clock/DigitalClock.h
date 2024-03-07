@@ -8,25 +8,30 @@ private:
     int hours;
     int minutes;
     int seconds;
+    int alarmHours;
+    int alarmMinutes;
+    int alarmSeconds;
+    int timerHours;
+    int timerMinutes;
+    int timerSeconds;
+    bool timerRunning;
 
 public:
-    // Constructors
     DigitalClock();
     DigitalClock(int h, int m, int s);
-
-    // Accessors
     int getHours() const;
     int getMinutes() const;
     int getSeconds() const;
-
-    // Mutators
     void setHours(int h);
     void setMinutes(int m);
     void setSeconds(int s);
-
-    // Member Functions
+    void setAlarm(int hour, int minute, int second);
+    bool checkAlarm();
+    void startTimer(int hour, int minute, int second);
+    void stopTimer();
+    bool isTimerRunning();
     void tick();
     std::string to_string() const;
 };
 
-#endif // DIGITALCLOCK_H
+#endif
