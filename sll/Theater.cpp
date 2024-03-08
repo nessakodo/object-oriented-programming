@@ -129,21 +129,3 @@ using std::string;
         return output;
     }
     
-
-
-// Notes:
-
-// Ensure the seatingChart is correctly initialized in the constructor, with each Seat marked as unassigned initially.
-// Consider edge cases, such as attempting to assign or release a seat that is out of the seating chart's bounds.
-// Main:
-
-// Test the functionality of the Theatre class by creating an instance, assigning and releasing seats, and setting a current movie. Verify the operations by checking seat availability and the current movie.
-// Challenge Tasks (Optional):
-
-// Enhanced Features:
-
-// Implement a method to display the seating chart, showing available and occupied seats differently.
-// Add functionality to count the number of available seats and the number of occupied seats.
-// Exceptions:
-
-// Add error handling for cases such as attempting to assign or release a seat that does not exist (out of bounds) or trying to assign an already occupied seat.
