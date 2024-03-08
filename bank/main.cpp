@@ -1,6 +1,40 @@
-// Main:
+// main.cpp
 
+#include "BankAccount.h"
+#include <string>
+
+#include <iostream>
+#include <string>
+// #include <vector>
+
+int main()
+{
 // Implement a main program to test your function. To test, construct some objects, figure what you should be getting back when you call certain functions (the expected values), call the functions to get the actual values. Then, compare them to see if what you got matches the expected result.
+
+    // Constructor Testing
+
+    BankAccount account1 = BankAccount();
+    BankAccount account2 = BankAccount("1234", "nessa");
+    BankAccount account3 = BankAccount("1114", "Michael Wronski", 19000, 0.1);
+
+    std::cout << "Account Balance: $" << account3.getBalance() << std::endl;
+    std::cout << account3.to_string();
+
+    double num;
+    std::cout << "Please enter a deposit amount: ";
+    std::cin >> num;
+    std::cout << account3.deposit(num) << std::endl;
+    std::cout << "Current balance after a deposit of $" << num << ":\n";
+    std::cout << account3.to_string();
+
+    std::cout << "Current balance after applying interest: \n";
+    std::cout << account3.applyInterest();
+
+
+
+    return 0;
+};
+
 // Challenge Tasks (Optional):
 
 // Enhanced Features:

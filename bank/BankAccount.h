@@ -1,6 +1,7 @@
 // BankAccount.h
 
 #include <iostream>
+#include <string>
 
 // Specifications for the BankAccount Class:
 
@@ -31,10 +32,10 @@ public:
     BankAccount();
 
     // Partial Parameterized Constructor: Accepts accountNumber, ownerName. Use the default values for the balance and interestRate.
-    BankAccount(std::string accountNumber, std::string ownerName);
+    BankAccount(std::string accountNumber, const std::string &ownerName);
 
     // Parameterized Constructor: Accepts accountNumber, ownerName, and balance and interestRate.
-    BankAccount(std::string accountNumber, std::string ownerName, double balance, double interestRate);
+    BankAccount(std::string accountNumber, const std::string &ownerName, double balance, double interestRate);
 
 // Accessors (getters):
 
@@ -56,7 +57,7 @@ public:
     void setAccountNumber(std::string anAccountNumber);
 
     // setOwnerName(std::string): Sets the owner's name.
-    void setOwnerName(std::string anOwnerName);
+    void setOwnerName(const std::string &anOwnerName);
 
     // setBalance(double): Sets the balance.
     void setBalance(double aBalance);
@@ -74,8 +75,9 @@ public:
     double withdraw(double amount);
 
     // applyInterest(): Applies the annual interest rate to the balance. This can be done by multiplying the balance by (1 + interestRate).
-    double applyInterest();
+    std::string applyInterest();
 
-
+    std::string to_string();
+    
 };
 
