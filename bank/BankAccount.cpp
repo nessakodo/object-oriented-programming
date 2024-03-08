@@ -3,6 +3,9 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
+#include <vector>
+
+using std::vector;
 
 #include "BankAccount.h"
 
@@ -13,6 +16,10 @@
     {
         // empty
     }
+
+    // Vector
+
+    vector<std::string> transactionHistory;
 
     // Partial Parameterized Constructor: Accepts accountNumber, ownerName. Use the default values for the balance and interestRate.
     BankAccount::BankAccount(std::string accountNumber, const std::string &ownerName)
@@ -97,6 +104,9 @@
                 std::cout << "deposit less or equal to 0";
             }
 
+        transactionHistory.push_back("Deposit: $" + std::to_string(amount));
+
+
         return balance;
     }
 
@@ -112,7 +122,9 @@
             {
                 std::cout << "withdrawal exceeds balance";
             }
-
+        
+        transactionHistory.push_back("Withdrawal: $" + std::to_string(amount));
+        
         return balance;
     }
 
@@ -138,12 +150,24 @@ std::string BankAccount::applyInterest()
 
     // Apply interest
     balance = balance * (1 + interestRate);
+    transactionHistory.push_back("Interest Applied");
 
     // Print current state after applying interest
     oss << "After applying interest:\n" << to_string() << "\n";
+    
 
     return oss.str();
+    
 }
+
+
+void BankAccount::printTransactions() 
+{
+    for (int i = 0; i < transactionHistory.size(); i++) {
+        std::cout << "Transaction No. " << i << ": " << transactionHistory[i] << std::endl;
+    }
+}
+
 
 
 

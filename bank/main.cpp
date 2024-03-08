@@ -11,6 +11,7 @@ int main()
 {
 // Implement a main program to test your function. To test, construct some objects, figure what you should be getting back when you call certain functions (the expected values), call the functions to get the actual values. Then, compare them to see if what you got matches the expected result.
 
+
     // Constructor Testing
 
     BankAccount account1 = BankAccount();
@@ -27,10 +28,18 @@ int main()
     std::cout << "Current balance after a deposit of $" << num << ":\n";
     std::cout << account3.to_string();
 
+    double num2;
+    std::cout << "Please enter a withdrawal amount: ";
+    std::cin >> num2;
+    std::cout << account3.withdraw(num2) << std::endl;
+    std::cout << "Current balance after a withdrawal of $" << num2 << ":\n";
+    std::cout << account3.to_string();
+
     std::cout << "Current balance after applying interest: \n";
     std::cout << account3.applyInterest();
 
-
+    std::cout << "Transactions: \n";
+    account3.printTransactions();
 
     return 0;
 };

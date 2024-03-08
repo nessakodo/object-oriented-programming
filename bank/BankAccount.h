@@ -79,5 +79,6 @@ public:
 
     std::string to_string();
     
+    void printTransactions();
 };
 
