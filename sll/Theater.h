@@ -27,6 +27,8 @@ private:
     int theaterNumber;
 
     // seatingChart (2D array of Seat objects): Represents the layout of seats in the theater.
+    
+    
     int rows;
     int cols;
     array <array<Seat, 10>, 10> seatingChart;

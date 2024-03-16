@@ -7,15 +7,15 @@
     // Default Constructor: Initialize assigned to false. occupant is initialized as an empty string.
     Seat::Seat() 
     : 
-    assigned(false), occupant("")
+    assigned(false), &name("")
     {
         // empty
     }
 
     // Parameterized Constructor: Accepts assigned and occupant. Initializes the seat with assignment status, and occupant information.
-    Seat::Seat(bool assigned, const std::string &occupant) 
-    :  
-    assigned(assigned), occupant(occupant) 
+    Seat::Seat(bool assigned, const std::string &name) 
+    :   
+    assigned(assigned), &name(name) 
     {
         // empty
     } 

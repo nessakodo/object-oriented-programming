@@ -19,7 +19,7 @@ public: // Public Member Functions:
 
     // Constructors:
     Seat(); // Default Constructor: Initialize assigned to false. occupant is initialized as an empty string.
-    Seat(bool assigned, const std::string &occupant); // Parameterized Constructor: Accepts assigned and occupant. Initializes the seat with assignment status, and occupant information.
+    Seat(bool assigned, const std::string &name); // Parameterized Constructor: Accepts assigned and occupant. Initializes the seat with assignment status, and occupant information.
 
     // Accessors (getters)
     bool isAssigned(); // isAssigned(): Returns true if the seat is assigned, otherwise false.

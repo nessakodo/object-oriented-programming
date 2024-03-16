@@ -29,6 +29,9 @@ using std::string;
         }
     }
 
+    // Seat seatToassign = seatingChart[row-1[col-1]];
+    // seatToAssign.assight();
+
 
     // Constructor: Accepts theatreNumber, rows, and cols for the seating chart dimensions. Initializes all seats in seatingChart as unassigned.
     Theater::Theater(int theaterNumber, int rows, int cols)
